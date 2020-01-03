@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import store, { UPDATE_STEPONE } from './store';
+import store, { UPDATE_STEPTHREE } from './store';
 
-export default class StepOne extends Component {
+export default class StepThree extends Component {
     constructor() {
         super();
 
@@ -37,8 +37,8 @@ export default class StepOne extends Component {
 
       handleNextStep() {
         store.dispatch({
-            type: UPDATE_STEPONE,
-            payload: this.state.newStepOne
+            type: UPDATE_STEPTHREE,
+            payload: this.state.newStepThree
       })
     };
     render() {

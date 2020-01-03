@@ -12,11 +12,15 @@ const initialState = {
 }
 
 export const UPDATE_STEPONE = 'UPDATE_STEPONE';
+export const UPDATE_STEPTWO = 'UPDATE_STEPTWO';
+export const UPDATE_STEPTHREE = 'UPDATE_STEPTHREE';
+export const FORGET_VALUES = 'FORGET_VALUES';
 
 function reducer(state = initialState, action) {
     const { type, payload } = action;
     switch(type) {
         case UPDATE_STEPONE:
+            const newStepOne = [...state.houses, payload]
             return {
                 ...state,
                 name: payload.name,
@@ -28,6 +32,25 @@ function reducer(state = initialState, action) {
                 mortgage: 0,
                 rent: 0
             };
+        case UPDATE_STEPTWO:
+            return {
+
+            }
+        case UPDATE_STEPTHREE:
+            return {
+
+            }
+        case FORGET_VALUES:
+            return {
+                name: '',
+                address: '',
+                city: '',
+                state: '',
+                zipcode: 0,
+                img: '',
+                mortgage: 0,
+                rent: 0
+            }
     }
 }
 
